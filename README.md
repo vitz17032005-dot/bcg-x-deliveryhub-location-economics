@@ -6,15 +6,17 @@
 
 > Which observed labor-market locations appear structurally attractive for technology delivery when compensation, role demand, data depth and FX stability are considered together?
 
-## Compressed public inputs
+## Data required
 
-- `data/raw/archives/exchange_rate_to_usd.csv.zip` — supplied Kaggle/IMF source.
-- `data/raw/archives/exchange_rate_usd_to.csv.zip` — supplied Kaggle/IMF source.
-- `data/raw/archives/india_col_salary_longitudinal_2010_2024.csv.zip` — supplied Kaggle city salary / cost-of-living panel.
-- `data/raw/archives/linkedin_role_market_extract.csv.zip` — exact source-derived technology-role extract from the supplied Kaggle `postings.csv`.
-- `data/raw/archives/linkedin_supporting_tables.zip` — original smaller LinkedIn CSVs.
+Upload the supplied compressed public archives under `data/raw/archives/`:
 
-The complete LinkedIn `postings.csv` is preserved as a GitHub Release asset rather than tracked in ordinary Git. See `GITHUB_RELEASE_ASSETS.md`.
+- `exchange_rate_to_usd.csv.zip`
+- `exchange_rate_usd_to.csv.zip`
+- `india_col_salary_longitudinal_2010_2024.csv.zip`
+- `linkedin_role_market_extract.csv.zip`
+- `linkedin_supporting_tables.zip`
+
+The complete LinkedIn `postings.csv` archive is too large for ordinary Git and should be handled as a GitHub Release asset.
 
 ## Model
 
@@ -39,11 +41,11 @@ Observed job demand + compensation + FX
 - 15% salary-data depth
 - 10% FX stability
 
-The score is a relative public-market ranking, **not** an internal hub profitability forecast.
+This is a relative public-market ranking, **not** an internal hub profitability forecast.
 
 ## Data interpretation
 
-LinkedIn company-country is used as an observed labor-market signal. It should not be described as the physical location of a delivery center. India is additionally evaluated at city level using the dedicated salary / cost-of-living panel.
+LinkedIn company-country is an observed labor-market signal. It should not be described as the physical location of a delivery center. India is additionally evaluated at city level using the dedicated salary / cost-of-living panel.
 
 ## Run
 
@@ -53,4 +55,4 @@ python src/run_model.py
 pytest
 ```
 
-No Kaggle credentials, APIs or retrieval scripts are required.
+No Kaggle credentials, API keys, KaggleHub or runtime dataset retrieval are required.
