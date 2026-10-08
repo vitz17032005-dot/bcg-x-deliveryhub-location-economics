@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "linkedin_jobs": "arshkon/linkedin-job-postings",
+    "india_salary": "franekwodarczyk/india-cost-of-living-vs-salary-2010-2024",
+    "fx": "robikscube/exhange-rates-to-usd-from-imforg-updated-daily"
+  },
+  "hub_candidate_logic": {
+    "min_postings": 10,
+    "eligible_roles": [
+      "Data Engineer",
+      "Data Analyst",
+      "Machine Learning / AI",
+      "Software Engineer",
+      "Product Manager",
+      "QA / Testing",
+      "Product / UX Design"
+    ]
+  },
+  "weights": {
+    "cost": 0.55,
+    "demand": 0.2,
+    "salary_depth": 0.15,
+    "fx_stability": 0.1
+  },
+  "role_keywords": {
+    "Data Engineer": ["data engineer", "data engineering"],
+    "Data Analyst": ["data analyst", "business intelligence", "bi analyst"],
+    "Machine Learning / AI": ["machine learning", "artificial intelligence", "ai engineer", "ml engineer", "machine learning engineer"],
+    "Software Engineer": ["software engineer", "software developer", "backend engineer", "full stack", "frontend engineer"],
+    "Product Manager": ["product manager", "product owner"],
+    "QA / Testing": ["qa engineer", "quality assurance", "test engineer"],
+    "Product / UX Design": ["product designer", "ux designer", "ui designer"]
+  }
+}
